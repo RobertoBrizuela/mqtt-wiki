@@ -1,8 +1,37 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 100%;
+  background: var(--ifm-color-primary-lightest);
+}
+
+.featureCard {
+  height: 100%;
+  padding: 2rem;
+  background: var(--ifm-color-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+[data-theme='dark'] .featureCard {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .featureCard h3 {
+  color: var(--ifm-color-emphasis-900);
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .featureSvg {

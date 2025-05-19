@@ -5,12 +5,14 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
+  icon: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Protocolo Ligero',
+    icon: '🚀',
     description: (
       <>
         MQTT es un protocolo de mensajería ligero diseñado para dispositivos con recursos limitados y redes de bajo ancho de banda.
@@ -19,6 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Patrón Pub/Sub',
+    icon: '🔄',
     description: (
       <>
         Basado en el modelo de publicación-suscripción, permitiendo una comunicación eficiente y desacoplada entre dispositivos IoT.
@@ -27,6 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Ideal para IoT',
+    icon: '🌐',
     description: (
       <>
         Optimizado para entornos con conectividad limitada, alta latencia y requisitos específicos de dispositivos IoT.
@@ -35,12 +39,15 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, description}: FeatureItem) {
+function Feature({title, icon, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+      <div className={styles.featureCard}>
+        <div className={styles.featureIcon}>{icon}</div>
+        <div className="text--center padding-horiz--md">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+        </div>
       </div>
     </div>
   );

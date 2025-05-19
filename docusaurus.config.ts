@@ -10,7 +10,7 @@ const config: Config = {
   url: 'https://your-mqtt-wiki-site.example.com',
   baseUrl: '/',
 
-  organizationName: 'your-org', 
+  organizationName: 'RobertoBrizuela', 
   projectName: 'mqtt-wiki',
 
   onBrokenLinks: 'throw',
@@ -27,10 +27,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/RobertoBrizuela/mqtt-wiki/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -38,10 +36,8 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/RobertoBrizuela/mqtt-wiki/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
