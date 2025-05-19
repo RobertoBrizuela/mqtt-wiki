@@ -35,8 +35,90 @@
 }
 
 [data-theme='dark'] .navbar__logo img {
-  /* Añade un fondo blanco al logo en modo oscuro */
+  /* Se añade un fondo blanco al logo en modo oscuro */
   background: white;
   padding: 5px;
   border-radius: 4px;
+}
+
+/**
+ * Estilos personalizados para el título principal
+ */
+.hero__title {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #3498db 30%, #2ecc71 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  animation: titleFade 1s ease-in;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.hero__title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: linear-gradient(45deg, #e74c3c 30%, #f1c40f 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.3;
+  filter: blur(8px);
+  transform: translateY(2px);
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, #2980b9 30%, #27ae60 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  animation: subtitleSlide 1s ease-in;
+  font-weight: 500;
+}
+
+@keyframes titleFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtitleSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero {
+  padding: 4rem 0;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.1) 0%,
+    rgba(46, 204, 113, 0.1) 100%
+  );
+}
+
+[data-theme='dark'] .hero {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.2) 0%,
+    rgba(46, 204, 113, 0.2) 100%
+  );
 }
