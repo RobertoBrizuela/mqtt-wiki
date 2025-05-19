@@ -26,3 +26,17 @@
   --ifm-color-primary-lightest: #8db2dc;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/**
+ * Estilos personalizados para el logo
+ */
+.navbar__logo img {
+  /* Mantiene el color original en modo claro */
+}
+
+[data-theme='dark'] .navbar__logo img {
+  /* Añade un fondo blanco al logo en modo oscuro */
+  background: white;
+  padding: 5px;
+  border-radius: 4px;
+}
