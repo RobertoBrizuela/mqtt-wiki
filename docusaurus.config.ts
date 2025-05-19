@@ -66,6 +66,9 @@ const config: Config = {
           position: 'left',
           label: 'Documentación',
         },
+        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/noticias', label: 'Noticias', position: 'left'},
+        {to: '/proyectos', label: 'Proyectos', position: 'left'},
         {
           href: 'https://github.com/RobertoBrizuela/mqtt-wiki',
           label: 'GitHub',
